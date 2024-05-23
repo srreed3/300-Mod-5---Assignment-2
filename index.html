@@ -1,0 +1,36 @@
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ticket Report</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Ticket Report</h1>
+    <input type="number" id="employeeID" placeholder="Enter Employee ID">
+    <button onclick="getTickets($('#employeeID').val())">Get Tickets</button>
+    
+    <table id="ticketTable" border="1">
+        <thead>
+            <tr>
+                <th>Request Date</th>
+                <th>Employee ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Problem Description</th>
+                <th>Status</th>
+                <th>Response Provided</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Ticket rows will be appended here -->
+        </tbody>
+    </table>
+
+    <div id="error" style="display:none; color:red;"></div>
+
+    <script src='main.js'></script>
+</body>
+</html>
